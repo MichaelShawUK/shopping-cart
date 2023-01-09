@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "RobotoCondensed";
+  src: url("../assets/fonts/RobotoCondensed-Regular.ttf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "RobotoCondensed";
+  src: url("../assets/fonts/RobotoCondensed-Bold.ttf");
+  font-weight: bold;
+}
+
+body {
+  font-family: "RobotoCondensed";
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

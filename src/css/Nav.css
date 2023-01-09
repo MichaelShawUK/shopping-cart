@@ -1,0 +1,70 @@
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  position: relative;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  gap: 20px;
+}
+
+nav li {
+  padding: 10px;
+}
+
+nav {
+  background-color: black;
+  height: 4rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  height: 2px;
+  background-color: white;
+  width: 100%;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-out;
+  transform-origin: right;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.logo {
+  color: white;
+  font-size: 3rem;
+}
+
+nav svg {
+  fill: white;
+  transform: scale(0.5);
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .logo {
+    display: none;
+  }
+
+  .nav-link-text {
+    display: none;
+  }
+
+  nav svg {
+    display: flex;
+  }
+}
