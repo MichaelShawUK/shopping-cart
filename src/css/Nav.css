@@ -1,5 +1,5 @@
 nav a {
-  text-decoration: none;
+  /* text-decoration: none; */
   color: white;
   font-weight: bold;
   position: relative;
@@ -44,19 +44,30 @@ nav a:hover::after {
   transform-origin: left;
 }
 
-.logo {
-  color: white;
-  font-size: 3rem;
-}
-
 nav svg {
   fill: white;
   transform: scale(0.5);
   display: none;
 }
 
+#pick {
+  display: block;
+  transform: scale(2);
+  margin: 0 1rem;
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-text {
+  color: white;
+  font-size: 3rem;
+}
+
 @media (max-width: 600px) {
-  .logo {
+  .logo-text {
     display: none;
   }
 

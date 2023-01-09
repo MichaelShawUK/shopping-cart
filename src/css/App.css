@@ -16,6 +16,63 @@
   animation-timing-function: ease-in-out;
 }
 
+/* .main-content {
+  text-align: center;
+  font-size: 3rem;
+  opacity: 0;
+  color: black;
+  box-shadow: inset 0 0 0 2000px white;
+  animation-name: fadein;
+  animation-delay: 1s;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+.flex-main {
+  display: absolute;
+  top: 0;
+  width: max-content;
+  margin: 100px auto;
+} */
+
+#slide-left {
+  position: absolute;
+  width: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  background-color: white;
+  box-shadow: 0 0 5px black;
+  animation-name: slideleft;
+  animation-duration: 1s;
+  animation-delay: 0.6s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+#slide-left::before {
+  content: "Unlock your sound";
+  position: absolute;
+  width: min-content;
+  text-align: center;
+  font-size: 3rem;
+  text-transform: uppercase;
+  left: -180px;
+  margin-top: 100px;
+}
+
+@keyframes slideleft {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 35%;
+    opacity: 1;
+  }
+}
+
 @keyframes slidedown {
   from {
     height: 0;
@@ -31,5 +88,24 @@
   }
   to {
     box-shadow: inset 0 0 0 2000px rgba(255, 255, 255, 0.6);
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-content {
+    font-size: 2rem;
+  }
+
+  .flex-main {
+    width: fit-content;
   }
 }
