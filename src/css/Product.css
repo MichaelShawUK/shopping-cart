@@ -1,22 +1,16 @@
-.Shop {
+.Product {
   background-image: url("../assets/img/bg.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   box-shadow: inset 0 0 0 2000px rgba(255, 255, 255, 0.6);
 }
 
-#products {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.Product .product-name {
 }
 
-.Shop h1 {
-  text-align: center;
+.Product .price {
 }
 
-.products a {
-  height: 100%;
-  width: 100%;
-  display: block;
+.Product .display-img {
+  width: 400px;
 }
