@@ -61,3 +61,15 @@
   background-color: #aaa;
   color: black;
 }
+
+@media (max-width: 500px) {
+  .preview-img {
+    width: 100px;
+  }
+  .Product .display-img {
+    width: 250px;
+  }
+  .purchase-btns {
+    flex-direction: column;
+  }
+}
