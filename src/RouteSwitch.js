@@ -33,6 +33,20 @@ const RouteSwitch = () => {
     setOrder(orderItems);
   }
 
+  function changeQuantity(e) {
+    if (e.target.dataset.count === "increment") {
+      setPurchases(purchases.concat(e.target.dataset.id));
+    } else if (e.target.dataset.count === "decrement") {
+      const index = purchases.findIndex(
+        (purchase) => purchase === e.target.dataset.id
+      );
+      setPurchases([
+        ...purchases.slice(0, index),
+        ...purchases.slice(index + 1),
+      ]);
+    }
+  }
+
   useEffect(() => {
     createOrder(purchases);
   }, [purchases]);
@@ -43,7 +57,10 @@ const RouteSwitch = () => {
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/shop" element={<Shop />} />
-        <Route path="/cart" element={<Cart order={order} />} />
+        <Route
+          path="/cart"
+          element={<Cart order={order} changeQuantity={changeQuantity} />}
+        />
         <Route path="/shop/:id" element={<Product onClick={addItemToCart} />} />
       </Routes>
     </BrowserRouter>

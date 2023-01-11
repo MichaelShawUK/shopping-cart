@@ -46,15 +46,8 @@
 }
 
 .purchase-btns button {
-  cursor: pointer;
-  border: none;
-  background-color: black;
-  color: white;
-  font-weight: bold;
   padding: 1rem 2rem;
   margin-top: 2rem;
-  /* box-shadow: 0 0 50px black; */
-  border-radius: 2px;
 }
 
 .purchase-btns button:hover {

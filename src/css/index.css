@@ -34,3 +34,17 @@ body {
 a {
   text-decoration: none;
 }
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  border-radius: 2px;
+}
+
+button:hover {
+  background-color: #aaa;
+  color: black;
+}
