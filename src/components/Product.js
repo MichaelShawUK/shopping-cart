@@ -1,9 +1,9 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useState } from "react";
 import products from "../data/products.js";
 import "../css/Product.css";
 
-const Product = () => {
+const Product = ({ onClick }) => {
   const { id } = useParams();
   const item = products.find((product) => product.id === id);
   const [imgs, setImgs] = useState([item.displayImg].concat(item.galleryImgs));
@@ -48,8 +48,14 @@ const Product = () => {
           })}
         </ul>
         <div className="purchase-btns">
-          <button>ADD TO CART</button>
-          <button>BUY NOW</button>
+          <button onClick={onClick} data-id={id}>
+            ADD TO CART
+          </button>
+          <Link to="../cart" state={{ id }}>
+            <button onClick={onClick} data-id={id}>
+              BUY NOW
+            </button>
+          </Link>
         </div>
       </div>
     </div>

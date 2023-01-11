@@ -2,7 +2,7 @@ import products from "../data/products.js";
 import "../css/Shop.css";
 import Card from "./Card.js";
 
-const Shop = () => {
+const Shop = ({ onClick }) => {
   return (
     <div className="Shop">
       <div id="products">
