@@ -35,15 +35,27 @@
   justify-content: space-around;
 }
 
+#order-total {
+  margin: 1rem 3rem;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: right;
+}
+
 @media (max-width: 600px) {
   .item-img {
     width: 100px;
   }
-  .cart-name {
+  .cart-name,
+  #order-total {
     font-size: 1.2rem;
   }
   .cart-price,
   .cart-quantity {
     font-size: 1rem;
+  }
+
+  #order-total {
+    margin-right: 2rem;
   }
 }

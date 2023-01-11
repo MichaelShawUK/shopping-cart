@@ -1,6 +1,12 @@
 import "../css/Cart.css";
 
 const Cart = ({ order }) => {
+  const total = order.reduce(
+    (sum, item) => sum + item.price * item.quantity,
+    0
+  );
+  console.log(total);
+
   return (
     <div className="Cart">
       {order.map((item) => {
@@ -15,6 +21,7 @@ const Cart = ({ order }) => {
           </div>
         );
       })}
+      {total ? <div id="order-total">Order Total: {`£${total}`}</div> : null}
     </div>
   );
 };
