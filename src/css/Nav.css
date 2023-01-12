@@ -1,5 +1,4 @@
 nav a {
-  /* text-decoration: none; */
   color: white;
   font-weight: bold;
   position: relative;
@@ -71,7 +70,6 @@ nav svg {
   color: black;
   position: absolute;
   top: -3px;
-  /* left: 10px; */
   border: 2px solid white;
   padding: 0 5px;
   border-radius: 50%;

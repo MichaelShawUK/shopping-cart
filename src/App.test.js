@@ -1,8 +1,16 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen } from "@testing-library/react";
+import RouteSwitch from "./RouteSwitch.js";
+import App from "./App";
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test("renders nav", () => {
+  render(<RouteSwitch />);
+  const nav = screen.getByRole("navigation");
+  expect(nav).toBeInTheDocument();
+});
+
+describe("App component", () => {
+  it("matches snapshot", () => {
+    const { container } = render(<App />);
+    expect(container).toMatchSnapshot();
+  });
 });

@@ -7,7 +7,7 @@ const Shop = ({ onClick }) => {
     <div className="Shop">
       <div id="products">
         {products.map((product) => (
-          <Card key={product.id} item={product} />
+          <Card key={product.id} item={product} data-testid="card" />
         ))}
       </div>
     </div>
